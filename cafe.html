@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We4 Cafe by Sumit Prakash</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header></header>
+  <nav id="navbar">
+    <a id="nav-button" href="#" style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 80px;
+          height: 40px;
+        ">
+      <span class="material-symbols-outlined"> restaurant </span>
+      <h4>We4</h4>
+    </a>
+
+    <ul>
+      <li class="nav-items"><a href="#menu">Menu</a></li>
+      <li class="nav-items"><a href="#table">Book Table</a></li>
+      <li class="nav-items"><a href="#contact">Contact Us</a></li>
+      <li class="nav-items"><a href="#about">About Us</a></li>
+      <li onclick="cart()" class="nav-items"><a href="#cart">Cart</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+
+    <section id="welcome" class="typewriter">
+     
+      <div
+      style="padding: 0px;
+      position: absolute;
+      top: 5px;
+    left: 5px;
+      font-size: 0.5em;"
+      > <span class="material-symbols-outlined"> restaurant </span>
+        <span>We4</h5> <span
+         
+          ><i
+          style="    font-size: 0.25em;
+          font-family:cursive;
+          ">by Sumit Prakash</i></span> </div>
+      <h4>
+        Welcome to We4 Cafe !
+      </h4>
+        <i>we serve coffee and delicious foods</i>
+
+        <a href="#menu" 
+        style="
+            right: 0px;
+            position: relative;
+            bottom: -253px;"
+        class="fa fa-chevron-down bounce2"></a>
+    </section>
+    <div id="container">
+      <section id="menu">
+        <nav id="menu-nav">
+          <ul>
+            <li>
+              <button class="menu-category-button" onclick="displayCurrentGridAndHideOthers('coffee-grid')">
+                Coffee
+              </button>
+            </li>
+            <li><button class="menu-category-button">Tea</button></li>
+            <li><button class="menu-category-button">Pastry</button></li>
+            <li><button class="menu-category-button">Fast Food</button></li>
+            <li><button class="menu-category-button">Beverage</button></li>
+            <li><button class="menu-category-button">Sweets</button></li>
+            <li><button class="menu-category-button">Chocolate</button></li>
+          </ul>
+        </nav>
+        <div class="menu-grid" id="coffee-grid">
+          <div id="item-0" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Cappuccino</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">90.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Capuccino', qty:1, price:90.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-1" class="item">
+            <div class="details item-1-details">
+              <div class="wrap">
+                <h2 class="title item-1-title">Americano</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-1-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-1-price">95.00</h1>
+                </div>
+              </div>
+              <button class="add item-1-add" onclick="storeCartItem({item:'Americano',qty:1,price:95.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-2" class="item">
+            <div class="details item-1-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Lattee</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">80.50</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Lattee',qty:1,price:80.50})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-3" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Macchiato</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">110.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Macchiato', qty:1, price:110.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-4" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Art Latte</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">150.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Art Latte', qty:1, price:150.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-5" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Cortado</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">210.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Cortado', qty:1, price:210.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-6" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Cafe au lait</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">70.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Cafe au lait', qty:1, price:70})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-7" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Chai Coffee</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">50.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Chai Coffee', qty:1, price:50.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-8" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Affogatto</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">220.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Affogatto', qty:1, price:220.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-9" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Mocha</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">250.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Mocha', qty:1, price:250.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-10" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Black Coffee</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">105.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Black Coffee', qty:1, price:105.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-11" class="item">
+            <div class="details item-11-details">
+              <div class="wrap">
+                <h2 class="title item-11-title">Risterro</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">75.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Risterro', qty:1, price:75.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-12" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Irish Coffee</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">153.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Irish Coffee', qty:1, price:153.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-13" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Frappe</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">60.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Frappe', qty:1, price:60.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-14" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Cold Brew</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">300.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Cold Brew', qty:1, price:300.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+          <div id="item-15" class="item">
+            <div class="details item-0-details">
+              <div class="wrap">
+                <h2 class="title item-0-title">Instant coffee</h2>
+                <div class="price-wrap">
+                  <span class="material-symbols-outlined rupee item-0-rupee">
+                    currency_rupee
+                  </span>
+                  <h1 class="price itme-0-price">55.00</h1>
+                </div>
+              </div>
+              <button class="add item-0-add" onclick="storeCartItem({item:'Instant coffee', qty:1, price:55.00})">
+                <span class="material-symbols-outlined"> shopping_bag </span>Add
+                to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="snackbar">
+          Item added to cart !
+        </div>
+      </section>
+      <section id="table">
+        <div id="booking-cnf-popup">
+          <div id="booking-cnf-popup-modal">
+            <button id="booking-close-btn" onclick="closeBookingCnfWindow()">
+              <span class="fa fa-times"></span>
+            </button>
+            <center style="padding-top: 30px; padding-bottom: 30px;">
+              <h1 style="letter-spacing: 0.04em;
+            color: #b3b5c1;">Congratulations!! Your table booking is confirmed !</h1>
+            </center>
+            <center>
+              <h3>Booking Details</h3>
+            </center>
+            <div id="book-details">
+              <div class="form-elements">
+                <label for="name">Enter Name</label>
+                <span id="book-name"></span>
+              </div>
+              <div class="form-elements">
+                <label for="email">Enter Email Id</label>
+                <span id="book-email"></span>
+              </div>
+              <div class="form-elements">
+                <label for="date">Enter Booking Date</label>
+                <span id="book-date"></span>
+              </div>
+              <div class="form-elements">
+                <label for="time">Enter Booking Time</label>
+                <span id="book-time"></span>
+              </div>
+              <div class="form-elements">
+                <label for="guest">Number of Guests</label>
+                <span id="book-guest"></span>
+              </div>
+              <div class="form-elements">
+                <label for="table-no">Number of Tables</label>
+                <span id="book-table"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="table-title">Table Booking</span>
+        <form class="table-booking-form" id="table-booking-form" onsubmit="return bookTable(event)">
+          <div class="form-elements">
+            <label for="name">Enter Name</label>
+            <input required type="text" name="name" id="name" placeholder="Full Name" />
+          </div>
+          <div class="form-elements">
+            <label for="email">Enter Email Id</label>
+            <input required type="text" name="email" id="email" placeholder="Enter Email Id">
+          </div>
+          <div class="form-elements">
+            <label for="date">Enter Booking Date</label>
+            <input required type="date" name="date" id="date" placeholder="" />
+          </div>
+          <div class="form-elements">
+            <label for="time">Enter Booking Time</label>
+            <input required type="time" name="time" id="time">
+          </div>
+          <div class="form-elements">
+            <label for="guest">Number of Guests</label>
+            <input required type="number" name="guest" id="guest" min="0" max="50" value="1">
+          </div>
+          <div class="form-elements">
+            <label for="table-no">Number of Tables</label>
+            <input required type="number" name="table-no" id="table-no" min="0" max="50" value="1">
+          </div>
+          <button type="submit" class="table-booking-form-submit">Confirm Booking !</button>
+        </form>
+      </section>
+      <section id="contact">
+        <div id="contact-main">
+          <h4 id="contact-title">We are available on below socials !</h4>
+          <div id="socials">
+            <div id="icon">
+              <a href="https://www.facebook.com/sumit.prakash.5492" target="_blank" class="fa fa-facebook"></a>
+            </div>
+            <div id="icon">
+              <a href="https://instagram.com/sumit3891?igshid=MzNlNGNkZWQ4Mg==" target="_blank"
+                class="fa fa-instagram"></a>
+            </div>
+            <div id="icon">
+              <a href="https://www.linkedin.com/in/sumit-prakash-a83667267#" target="_blank" class="fa fa-linkedin"></a>
+            </div>
+            <div id="icon">
+              <a href="mailto:prakashsumit2017@gmail.com" target="_top" class="fa fa-envelope"></a>
+            </div>
+            <div id="icon">
+              <a href="https://api.whatsapp.com/send?phone=747979614061" target="_blank" class="fa fa-phone"></a>
+            </div>
+          </div>
+      </section>
+      <section id="about">
+        <div id="about-first">
+          <div id="photo" class="photo-1"></div>
+          <div id="bio" class="bio-1">
+            <h1>We4 Cafe and Restaurant</h1>
+            <p>
+              Our journey from the bean to the cup started in the year 2022. Café culture had not set its footprint and
+              coffee was still considered a luxury. Our quest to provide a truly International experience and brew a truly
+              Italian cuppa led us to create the brand Barista. Spearheading the Indian café culture, We4 Cafe was an
+              opportunity to discover both the coffee and the craft. </p>
+          </div>
+        </div>
+        <div id="about-second">
+          <div id="photo" class="photo-2"></div>
+          <div id="bio" class="bio-2">
+            <h1>Meet the owner</h1>
+            <p>
+              Our story began when the founder Mr.Sumit discovered his love for coffee and created a much-loved cafe that
+              stands the test of time. Mr. Sumit is a coffee lover and had passionate about coffee, which turns him to
+              open his brand We4 Cafe.
+              Mr. Sumit has collborated with 3 of his friends to start this venture and make it a successful hit among the
+              youth and the millennials and make them passionate about coffee culture.</p>
+          </div>
+        </div>
+      </section>
+      <section id="cart">
+        <div id="bill-pay-wrap">
+          <div id="bill-pay-cnf">
+            <button id="booking-close-btn" onclick="closePayBillCnfWindow()" style="position: absolute;     top: 0;
+            right: 0;">
+              <span class="fa fa-times">
+              </span>
+            </button>
+            <div class="fa fa-check-circle"></div>
+            <div>Order Confirmed for Rs. <span id="bill-pay-cnf-price">00</span> !</div>
+          <br>
+            <div>
+              Customer Name : <span id="bill-cust-name"></span>
+            </div>
+
+            <div>
+              Order Number : <span id="bill-pay-cnf-ord-no">29H</span>
+            </div>
+          </div>
+        </div>
+        <div id="cart-title">
+          <span class="fa fa-shopping-cart"> </span>
+          <span>Cart</span>
+        </div>
+        <div id="cart-main">
+          <div id="cart-details" style="justify-content: flex-start !important; overflow-y: none;
+          overflow-y: none;">
+            <span id="cart-details-title">
+              Item details
+            </span>
+            <ul id="cart-item-ul" style="list-style: none; margin: 0; box-sizing: border-box; padding: 0px;">
+              <div id="no-items" style="margin-top: 40%; text-align: center;"
+              >No items in the cart !</div>
+            </ul>
+          </div>
+          <div id="cart-bill">
+            <span id="cart-bill-title">
+              Bill
+            </span>
+            <div>
+              <div id="cart-bill-title" style="padding-bottom: 30px;">
+                Customer's Details
+              </div>
+              <form onsubmit="return payBill(event)" class="bill-form">
+                <div class="form-elements bill-row">
+                  <label for="bill-name">Customer's name</label>
+                  <input required type="text" name="bill-name" id="bill-name" placeholder="Enter name">
+                </div>
+                <div class="form-elements bill-row">
+                  <label for="bill-name">Customer's phone</label>
+                  <input required type="text" name="bill-phone" id="bill-phone" placeholder="Enter phone">
+                </div>
+                <div class="form-elements bill-row">
+                  <label for="bill-email">Customer's email Id</label>
+                  <input required type="text" name="bill-email" id="bill-email" placeholder="Enter email">
+                </div>
+                <button id="pay-bill">Pay bill !</button>
+              </form>
+            </div>
+            <div style="display: flex; place-items: center; justify-content: center;
+      background-image: linear-gradient(to right, rgb(15 15 15 / 15%) 0%, rgba(0, 0, 0, 0) 100%);
+      
+            ">
+              <span class="material-symbols-outlined" style="font-size: 4em;">
+                currency_rupee
+              </span>
+              <span style="font-size: 3em;" id="cart-price">
+                00
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+  </main>
+</body>
+
+</html>

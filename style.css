@@ -128,72 +128,129 @@ section {
     background: url(https://media.istockphoto.com/id/960155302/photo/coffee-cup-and-coffee-beans-on-wooden-table-and-green-decoration.webp?s=170667a&w=0&k=20&c=5BgyW-5b2X1yg9zt59dq0yyPsaQLueaaamCCAkXiROI=);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  }
  #item-1{
     background: url(https://media.istockphoto.com/id/1069160824/photo/latte-art-cup-of-coffee-with-plant-vase-on-table-dark-style.webp?s=170667a&w=0&k=20&c=zvxcLNSUqjywvzIvQQCg0X8doCof7cMoc78w3joTlR4=);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  }
  #item-2{
     background: url(https://images.unsplash.com/photo-1497636577773-f1231844b336?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-3{
     background: url(https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-4{
     background: url(https://images.unsplash.com/photo-1516743619420-154b70a65fea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-5{
-    background: url(https://media.istockphoto.com/id/960155302/photo/coffee-cup-and-coffee-beans-on-wooden-table-and-green-decoration.webp?s=170667a&w=0&k=20&c=5BgyW-5b2X1yg9zt59dq0yyPsaQLueaaamCCAkXiROI=);
-    background-size: 100%;
+    background: url(https://images.unsplash.com/photo-1522247836481-7a6474e0d291?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80);
+        background-size: 90%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-6{
     background: url(https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NjB8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-7{
     background: url(https://images.unsplash.com/photo-1615486780246-76e6bb33e8b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NzV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-8{
     background: url(https://images.unsplash.com/photo-1473923377535-0002805f57e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTE4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-9{
     background: url(https://images.unsplash.com/photo-1598685530037-feb0accd2722?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTI2fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-10{
     background: url(https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NDZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
 
  } #item-11{
     background: url(https://media.istockphoto.com/id/1292569380/photo/thick-cream-cold-coffee-in-a-tall-glass-with-cream-poured-on-a-old-rustic-wooden-table.webp?b=1&s=170667a&w=0&k=20&c=nYIg_bJONsTBNJSqjaQaawMuFcNqNYYMj2PfHfheceY=);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
     
  } #item-12{
     background: url(https://images.unsplash.com/photo-1501747315-124a0eaca060?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-13{
     background: url(https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-14{
     background: url(https://images.unsplash.com/photo-1511426420268-4cfdd3763b77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  } #item-15{
     background: url(https://images.unsplash.com/photo-1514066558159-fc8c737ef259?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
     background-size: 100%;
     background-position: center;
+  transition: background-size 1s ease-out;
+
  }
   
+
+.item{
+  transition: background-size 1s ease-out;
+}
+#item-0:hover,
+#item-1:hover,
+#item-2:hover,
+#item-3:hover,
+#item-4:hover,
+#item-5:hover,
+#item-6:hover,
+#item-7:hover,
+#item-8:hover,
+#item-9:hover,
+#item-10:hover,
+#item-11:hover,
+#item-12:hover,
+#item-13:hover,
+#item-14:hover,
+#item-15:hover
+{
+  background-size: 120%;
+}
+
+
  .menu-grid > div > img {
      height: 200px;
      width: auto;
@@ -532,7 +589,9 @@ section {
 
 
 #cart{
-  background: url(https://images.unsplash.com/photo-1647427017067-8f33ccbae493?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+  /* background: url(https://images.unsplash.com/photo-1647427017067-8f33ccbae493?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80); */
+  /* background: url(https://images.unsplash.com/photo-1542520698-eec198b78a09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80); */
+  background: url(https://images.unsplash.com/photo-1522295300885-83c080fdea3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
   background-size: 100%;
   background-blend-mode: hard-light;
   background-position: center;
@@ -571,14 +630,15 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
 }
 
 #cart-details, #cart-bill{
   height: 90%;
-  width: 40%;
-  background-color: #394f646c;
-  box-shadow: 0 10px 20px 10px rgba(68, 101, 150, 0.349);
+  width: 30%;
+  background-color: #1a222ae0;
+  box-shadow:0 10px 20px 10px rgb(26 29 34);
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -588,10 +648,10 @@ section {
 }
 
 #cart-bill{
-  height: 90%;
-  width: 40%;
-  background-color: #394f646c;
-  box-shadow: 0 10px 20px 10px rgba(68, 101, 150, 0.349);
+  /* height: 90%;
+  width: 40%; */
+  /* background-color: #394f646c; */
+  /* box-shadow: 0 10px 20px 10px rgba(68, 101, 150, 0.349); */
 
 
   
@@ -599,21 +659,17 @@ section {
 }
 
 
-#cart-details-title{
+#cart-details-title,#cart-bill-title {
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5em;
   padding: 10px;
+  text-align: center;
+  padding-top: 10px;
 
 }
 
-#cart-bill-title{
 
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.5em;
-  padding: 10px;
-
-}
 
 
 .item-row{
@@ -632,7 +688,7 @@ section {
 
 }
 
-.fa-shopping-cart:hover{
+.fa-shopping-cart:hover, .fa-check-circle:hover{
   background: none;
 }
 
@@ -737,18 +793,18 @@ section {
   position: absolute;
   width: 100%;
   height: 92%;
-  background-color: #2830386e;
+  background-color: #2d3842cc;
   /* display: flex; */
   display: none;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
 }
 #bill-pay-cnf{
   position: absolute;
   height: 25%;
   width: 30%;
-  background-color: #283038b8;
+  background-color: #283038;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -818,6 +874,7 @@ However, delay the fade out process for 2.5 seconds */
 
 main{
   scroll-behavior: smooth;
+  background-color: #283038;
 
 }
 
@@ -825,4 +882,108 @@ main{
   html {
     scroll-behavior: smooth;
   }
+}
+
+
+#welcome{
+  background-color: #283038;
+  /* background:  url(https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80); */
+/* background: url(https://images.unsplash.com/photo-1542181961-9590d0c79dab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80); */
+/* background: url(https://images.unsplash.com/photo-1578231177134-f1bbe379b054?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80); */
+background: url(https://images.unsplash.com/photo-1577452159743-646cfea0f699?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1219&q=80);
+
+  background-size: 100%;
+  background-position: center;
+  height: 100vh;
+  width: auto;
+  z-index: 15;
+  position: relative;
+  top: -60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: #95a0aa;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 4rem;
+
+
+  animation: bganimate 10s infinite;
+}
+
+@keyframes bganimate {
+
+  0%{
+    background-size: 100%;
+  }
+
+  20%{
+    background-size: 110%;
+  }
+  
+  40%{
+    background-size: 120%;;
+  }
+
+  60%{
+    background-size: 130%;
+  }
+
+  80%{
+    background-size: 140;
+  }
+
+  100%{
+    background-size: 150;
+
+  }
+}
+
+
+i{
+  font-size: 1.5rem;
+  font-family: cursive;
+}
+
+.typewriter h4 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3s steps(30, end),
+    blink-caret .5s step-end infinite;
+    background-image: linear-gradient(to right, rgb(15 15 15 / 15%) 0%, rgba(0, 0, 0, 0) 100%);
+
+
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.fa-chevron-down:hover{
+  background:  none
+}
+
+.bounce2 {
+  animation: bounce2 2s ease infinite;
+}
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }

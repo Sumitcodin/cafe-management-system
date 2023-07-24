@@ -29,6 +29,128 @@ var menuGrid = [
   },
 ];
 
+var userDetailsFromLs = localStorage.getItem("userlist")
+
+var userDetails =
+localStorage.getItem("userlist") ?
+
+[
+  {
+    userId: "sumitprakash",
+    password: "sumit123",
+    email: "prakashsumit2017@gmail.com"
+  }
+].concat(JSON.parse(userDetailsFromLs)) : [
+  {
+    userId: "sumitprakash",
+    password: "sumit123",
+    email: "prakashsumit2017@gmail.com"
+  }
+]
+
+function setUserDetails(){
+var userDetailsFromLs = JSON.parse(localStorage.getItem("userlist"))
+if(userDetailsFromLs !== null || userDetailsFromLs !== undefined || userDetailsFromLs.length !== 0){
+  Array.prototype.push.apply(userDetails, userDetailsFromLs)
+}
+
+localStorage.setItem("userlist",userDetails)
+console.log('userDetails', userDetails)
+  
+}
+
+function signup(event){
+
+  event.preventDefault()
+
+  console.log('signup', event);
+  var userid = event.srcElement[0].value
+  var pwd = event.srcElement[1].value
+  var repwd = event.srcElement[2].value
+  var email = event.srcElement[3].value
+  console.log(userid);
+  console.log(pwd);
+  console.log(repwd);
+  console.log(email);
+  
+if(pwd === repwd){
+  userDetails.push({userId:userid, password:pwd, email:email})
+  // localStorage.setItem("userlist", JSON.stringify(userDetails))
+
+
+  var x = document.getElementById("snackbar") 
+// Add the "show" class to DIV
+
+  x.className = "show";
+// After 3 seconds, remove the show class from DIV
+  // setTimeout(function(){ x.className = x.className.replace("show", ""); }, 20 * 1000);
+
+}else{
+
+  document.getElementById("signup-submit-btn").style.backgroundColor = "tomato"
+  var x = document.getElementById("snackbar")
+  x.className = x.className.replace("show", "")
+
+  document.getElementById("signup-pass").style.border = '1px solid tomato !important'
+
+
+
+  console.log(document.getElementById("signup-pass"));
+
+}
+
+setUserDetails()
+
+
+  console.log(userDetails)
+
+  event.stopPropagation()
+
+
+}
+
+
+
+function login(event){
+
+  console.log('login time', userDetails);
+  event.stopPropagation()
+  event.preventDefault()
+  // window.location.href = `${window.location.origin}/cafe.html`
+
+
+console.log(event)
+
+var userid = event.srcElement[0].value
+var pwd = event.srcElement[1].value
+
+
+var presentuser = null
+
+userDetails.forEach(user => {
+  if(user.userId === userid){
+    presentuser = user
+  }
+})
+
+if(presentuser !== null  && presentuser.password === pwd){
+  var x = document.getElementById("snackbar2")
+  x.className = x.className.replace("show", "")
+  localStorage.setItem("auth", true)
+    window.location.href = `${window.location.origin}/cafe.html`
+}else{
+  localStorage.setItem("auth", false)
+  var x = document.getElementById("snackbar2")
+// Add the "show" class to DIV
+
+  x.className = "show";
+}
+
+
+}
+
+
+var loginEnable = true
 function displayGridByClassNameAndHideOthers(className) {
   this.menuGrid.forEach((element) => {
     if (element.class === className) {
@@ -186,6 +308,9 @@ function payBill(event){
         document.getElementById("bill-pay-wrap").style.display = "flex"
         document.getElementById("bill-pay-cnf-price").innerText = cartPrice
         document.getElementById("bill-cust-name").innerText = event.srcElement[0].value
+        document.getElementById("bill-pay-cnf-ord-no").innerText = Math.floor((Math.random() * 100) + 1)
+
+        
 
     }else{
 
@@ -212,3 +337,7 @@ function closePayBillCnfWindow(){
     
     console.log(ul);
 }
+
+window.addEventListener("refresh", () => {
+
+})
