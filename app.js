@@ -137,7 +137,7 @@ if(presentuser !== null  && presentuser.password === pwd){
   var x = document.getElementById("snackbar2")
   x.className = x.className.replace("show", "")
   localStorage.setItem("auth", true)
-    window.location.href = `${window.location.origin}/cafe.html`
+    window.location.href = `${window.location.href}cafe.html`
 }else{
   localStorage.setItem("auth", false)
   var x = document.getElementById("snackbar2")
