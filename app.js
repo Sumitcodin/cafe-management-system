@@ -29,128 +29,135 @@ var menuGrid = [
   },
 ];
 
-var userDetailsFromLs = localStorage.getItem("userlist")
+var userDetailsFromLs = localStorage.getItem("userlist");
 
-var userDetails =
-localStorage.getItem("userlist") ?
-
-[
+var userDetails = [
   {
     userId: "sumitprakash",
     password: "sumit123",
-    email: "prakashsumit2017@gmail.com"
-  }
-].concat(JSON.parse(userDetailsFromLs)) : [
-  {
-    userId: "sumitprakash",
-    password: "sumit123",
-    email: "prakashsumit2017@gmail.com"
-  }
-]
+    email: "prakashsumit2017@gmail.com",
+  },
+];
 
-function setUserDetails(){
-var userDetailsFromLs = JSON.parse(localStorage.getItem("userlist"))
-if(userDetailsFromLs !== null || userDetailsFromLs !== undefined || userDetailsFromLs.length !== 0){
-  Array.prototype.push.apply(userDetails, userDetailsFromLs)
+// localStorage.getItem("userlist") ?
+
+// [
+//   {
+//     userId: "sumitprakash",
+//     password: "sumit123",
+//     email: "prakashsumit2017@gmail.com"
+//   }
+// ].concat(JSON.parse(userDetailsFromLs)) : [
+//   {
+//     userId: "sumitprakash",
+//     password: "sumit123",
+//     email: "prakashsumit2017@gmail.com"
+//   }
+// ]
+
+function setUserDetails() {
+  var userDetailsFromLs = JSON.parse(localStorage.getItem("userlist"));
+  if (
+    userDetailsFromLs !== null ||
+    userDetailsFromLs !== undefined ||
+    userDetailsFromLs.length !== 0
+  ) {
+    Array.prototype.push.apply(userDetails, userDetailsFromLs);
+  }
+
+  localStorage.setItem("userlist", JSON.stringify(userDetails));
+  console.log("userDetails stored in ls after signup", userDetails);
 }
 
-localStorage.setItem("userlist",userDetails)
-console.log('userDetails', userDetails)
-  
-}
+function signup(event) {
+  event.preventDefault();
 
-function signup(event){
-
-  event.preventDefault()
-
-  console.log('signup', event);
-  var userid = event.srcElement[0].value
-  var pwd = event.srcElement[1].value
-  var repwd = event.srcElement[2].value
-  var email = event.srcElement[3].value
+  console.log("signup", event);
+  var userid = event.srcElement[0].value;
+  var pwd = event.srcElement[1].value;
+  var repwd = event.srcElement[2].value;
+  var email = event.srcElement[3].value;
   console.log(userid);
   console.log(pwd);
   console.log(repwd);
   console.log(email);
-  
-if(pwd === repwd){
-  userDetails.push({userId:userid, password:pwd, email:email})
-  // localStorage.setItem("userlist", JSON.stringify(userDetails))
 
+  if (pwd === repwd) {
+    userDetails.push({ userId: userid, password: pwd, email: email });
+    // localStorage.setItem("userlist", JSON.stringify(userDetails))
 
-  var x = document.getElementById("snackbar") 
-// Add the "show" class to DIV
+    var x = document.getElementById("snackbar");
+    // Add the "show" class to DIV
 
-  x.className = "show";
-// After 3 seconds, remove the show class from DIV
-  // setTimeout(function(){ x.className = x.className.replace("show", ""); }, 20 * 1000);
+    x.className = "show";
+    // After 3 seconds, remove the show class from DIV
+    // setTimeout(function(){ x.className = x.className.replace("show", ""); }, 20 * 1000);
+  } else {
+    document.getElementById("signup-submit-btn").style.backgroundColor =
+      "tomato";
+    var x = document.getElementById("snackbar");
+    x.className = x.className.replace("show", "");
 
-}else{
+    document.getElementById("signup-pass").style.border =
+      "1px solid tomato !important";
 
-  document.getElementById("signup-submit-btn").style.backgroundColor = "tomato"
-  var x = document.getElementById("snackbar")
-  x.className = x.className.replace("show", "")
+    console.log(document.getElementById("signup-pass"));
+  }
 
-  document.getElementById("signup-pass").style.border = '1px solid tomato !important'
+  setUserDetails();
 
+  console.log(userDetails);
 
-
-  console.log(document.getElementById("signup-pass"));
-
+  event.stopPropagation();
 }
 
-setUserDetails()
-
-
-  console.log(userDetails)
-
-  event.stopPropagation()
-
-
-}
-
-
-
-function login(event){
-
-  console.log('login time', userDetails);
-  event.stopPropagation()
-  event.preventDefault()
+function login(event) {
+  console.log("login time", userDetails);
+  event.stopPropagation();
+  event.preventDefault();
   // window.location.href = `${window.location.origin}/cafe.html`
 
+  console.log(event);
 
-console.log(event)
+  var userid = event.srcElement[0].value;
+  var pwd = event.srcElement[1].value;
 
-var userid = event.srcElement[0].value
-var pwd = event.srcElement[1].value
+  var presentuser = null;
 
 
-var presentuser = null
+  userDetailsFromLs = JSON.parse(localStorage.getItem("userlist"))
 
-userDetails.forEach(user => {
-  if(user.userId === userid){
-    presentuser = user
+  var userDetailsListToBeUsed = userDetails
+
+  if (
+    userDetailsFromLs != null
+  ){
+    userDetailsListToBeUsed = userDetailsFromLs
+  }else{
+    userDetailsListToBeUsed = userDetails
   }
-})
 
-if(presentuser !== null  && presentuser.password === pwd){
-  var x = document.getElementById("snackbar2")
-  x.className = x.className.replace("show", "")
-  localStorage.setItem("auth", true)
-    window.location.href = `${window.location.href}cafe.html`
-}else{
-  localStorage.setItem("auth", false)
-  var x = document.getElementById("snackbar2")
-// Add the "show" class to DIV
+  userDetailsListToBeUsed.forEach((user) => {
+    if (user.userId === userid) {
+      presentuser = user;
+    }
+  });
 
-  x.className = "show";
+  if (presentuser !== null && presentuser.password === pwd) {
+    var x = document.getElementById("snackbar2");
+    x.className = x.className.replace("show", "");
+    localStorage.setItem("auth", true);
+    window.location.href = `${window.location.href}cafe.html`;
+  } else {
+    localStorage.setItem("auth", false);
+    var x = document.getElementById("snackbar2");
+    // Add the "show" class to DIV
+
+    x.className = "show";
+  }
 }
 
-
-}
-
-
-var loginEnable = true
+var loginEnable = true;
 function displayGridByClassNameAndHideOthers(className) {
   this.menuGrid.forEach((element) => {
     if (element.class === className) {
@@ -177,12 +184,12 @@ function displayCurrentGridAndHideOthers(className) {
 }
 
 function bookTable(event) {
-//   console.log(event.srcElement[0].value);
-//   console.log(event.srcElement[1].value);
-//   console.log(event.srcElement[2].value);
-//   console.log(event.srcElement[3].value);
-//   console.log(event.srcElement[4].value);
-//   console.log(event.srcElement[5].value);
+  //   console.log(event.srcElement[0].value);
+  //   console.log(event.srcElement[1].value);
+  //   console.log(event.srcElement[2].value);
+  //   console.log(event.srcElement[3].value);
+  //   console.log(event.srcElement[4].value);
+  //   console.log(event.srcElement[5].value);
 
   document.getElementById("book-name").innerText = event.srcElement[0].value;
   document.getElementById("book-email").innerText = event.srcElement[1].value;
@@ -201,143 +208,127 @@ function bookTable(event) {
 // tableForm.addEventListener("submit", bookTable);
 
 function closeBookingCnfWindow() {
-//   console.log("clicked");
+  //   console.log("clicked");
   document.getElementById("booking-cnf-popup").style.display = "none";
 }
 
 var carItems = [];
 
 function storeCartItem(data) {
+  //   console.log(carItems);
 
-//   console.log(carItems);
-
-  var foundAt
-for (let index = 0; index < carItems.length; index++) {
+  var foundAt;
+  for (let index = 0; index < carItems.length; index++) {
     const element = carItems[index];
-    if(element.item === data.item){
-        foundAt = index
+    if (element.item === data.item) {
+      foundAt = index;
     }
-    
-}
+  }
 
-if( foundAt !== undefined){
+  if (foundAt !== undefined) {
     // console.log(foundAt)
-    let item = carItems[foundAt]
+    let item = carItems[foundAt];
     // console.log(item)
-    item.qty = item.qty + data.qty
-    carItems[foundAt] = item
-}else{
-    carItems.push(data)
-}
-    
-var x = document.getElementById("snackbar")
+    item.qty = item.qty + data.qty;
+    carItems[foundAt] = item;
+  } else {
+    carItems.push(data);
+  }
 
-// Add the "show" class to DIV
-x.className = "show";
+  var x = document.getElementById("snackbar");
 
-// After 3 seconds, remove the show class from DIV
-setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2500);
-  
+  // Add the "show" class to DIV
+  x.className = "show";
 
-//   console.log(carItems);
-}
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function () {
+    x.className = x.className.replace("show", "");
+  }, 2500);
 
-
-
-function cart(data){
-
-    // console.log(carItems)
-
-    var ul = document.getElementById("cart-item-ul")
-    ul.innerHTML = ''
-
-
-    var totalPrice = 0
-    carItems.forEach(item => {
-
-        var li = document.createElement('li')
-
-        var rowdiv = document.createElement('div')
-        rowdiv.setAttribute("class","item-row")
-
-        var itemNameDiv = document.createElement('div')
-        itemNameDiv.innerText = item.item
-
-        var itemQtyDiv = document.createElement('div')
-        itemQtyDiv.innerText = "X"+item.qty.toString()
-
-        var itemPriceDiv = document.createElement('div')
-        itemPriceDiv.innerText = "Rs."+item.price.toString()
-
-        rowdiv.appendChild(itemNameDiv)
-        rowdiv.appendChild(itemQtyDiv)
-        rowdiv.appendChild(itemPriceDiv)
-
-        li.appendChild(rowdiv)
-        ul.appendChild(li)
-
-        
-        // console.log(li)
-        
-        totalPrice += (item.qty * item.price)
-        // console.log('totalPrice', totalPrice)
-    })
-    if(carItems.length >= 9 ){
-        document.getElementById("cart-details").style.overflowY = "scroll"
-    }else{
-        document.getElementById("cart-details").style.overflowY = "none"
-
-    }
-    document.getElementById("cart-price").innerText = totalPrice
-
-
+  //   console.log(carItems);
 }
 
+function cart(data) {
+  // console.log(carItems)
 
-function payBill(event){
+  var ul = document.getElementById("cart-item-ul");
+  ul.innerHTML = "";
 
-    console.log('paybill');
-    var cartPrice = document.getElementById("cart-price").innerText
-    // console.log('cartPrice', cartPrice);
-    // console.log(event.srcElement[0].value);
-    // console.log(event.srcElement[1].value);
-    // console.log(event.srcElement[2].value);
+  var totalPrice = 0;
+  carItems.forEach((item) => {
+    var li = document.createElement("li");
 
-    if(carItems.length > 0){
+    var rowdiv = document.createElement("div");
+    rowdiv.setAttribute("class", "item-row");
 
-        document.getElementById("bill-pay-wrap").style.display = "flex"
-        document.getElementById("bill-pay-cnf-price").innerText = cartPrice
-        document.getElementById("bill-cust-name").innerText = event.srcElement[0].value
-        document.getElementById("bill-pay-cnf-ord-no").innerText = Math.floor((Math.random() * 100) + 1)
+    var itemNameDiv = document.createElement("div");
+    itemNameDiv.innerText = item.item;
 
-        
+    var itemQtyDiv = document.createElement("div");
+    itemQtyDiv.innerText = "X" + item.qty.toString();
 
-    }else{
+    var itemPriceDiv = document.createElement("div");
+    itemPriceDiv.innerText = "Rs." + item.price.toString();
 
-    }
+    rowdiv.appendChild(itemNameDiv);
+    rowdiv.appendChild(itemQtyDiv);
+    rowdiv.appendChild(itemPriceDiv);
 
-    // console.log(event.srcElement.nextSibling.parentElement.children[2].firstElementChild.nextElementSibling.innerText)
-    event.preventDefault()
+    li.appendChild(rowdiv);
+    ul.appendChild(li);
+
+    // console.log(li)
+
+    totalPrice += item.qty * item.price;
+    // console.log('totalPrice', totalPrice)
+  });
+  if (carItems.length >= 9) {
+    document.getElementById("cart-details").style.overflowY = "scroll";
+  } else {
+    document.getElementById("cart-details").style.overflowY = "none";
+  }
+  document.getElementById("cart-price").innerText = totalPrice;
 }
 
-function closePayBillCnfWindow(){
-    document.getElementById("bill-pay-wrap").style.display = "none"
-    var ul = document.getElementById("cart-item-ul")
-    var div = document.createElement('div')
-    div.innerText = 'No items in the cart !'
-    div.style.marginTop = "40%"
-    div.style.textAlign = "center"
-    console.log(div)
-    div.setAttribute("id", "no-items")
-    var li = document.createElement('li')
-    li.appendChild(div)
-    ul.appendChild(li)
-    carItems = []
-    cart({})
-    
-    console.log(ul);
+function payBill(event) {
+  console.log("paybill");
+  var cartPrice = document.getElementById("cart-price").innerText;
+  // console.log('cartPrice', cartPrice);
+  // console.log(event.srcElement[0].value);
+  // console.log(event.srcElement[1].value);
+  // console.log(event.srcElement[2].value);
+
+  if (carItems.length > 0) {
+    document.getElementById("bill-pay-wrap").style.display = "flex";
+    document.getElementById("bill-pay-cnf-price").innerText = cartPrice;
+    document.getElementById("bill-cust-name").innerText =
+      event.srcElement[0].value;
+    document.getElementById("bill-pay-cnf-ord-no").innerText = Math.floor(
+      Math.random() * 100 + 1
+    );
+  } else {
+  }
+
+  // console.log(event.srcElement.nextSibling.parentElement.children[2].firstElementChild.nextElementSibling.innerText)
+  event.preventDefault();
 }
 
-window.addEventListener("refresh", () => {
+function closePayBillCnfWindow() {
+  document.getElementById("bill-pay-wrap").style.display = "none";
+  var ul = document.getElementById("cart-item-ul");
+  var div = document.createElement("div");
+  div.innerText = "No items in the cart !";
+  div.style.marginTop = "40%";
+  div.style.textAlign = "center";
+  console.log(div);
+  div.setAttribute("id", "no-items");
+  var li = document.createElement("li");
+  li.appendChild(div);
+  ul.appendChild(li);
+  carItems = [];
+  cart({});
 
-})
+  console.log(ul);
+}
+
+window.addEventListener("refresh", () => {});
